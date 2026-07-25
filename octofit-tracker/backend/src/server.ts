@@ -19,7 +19,7 @@ const baseUrl = codespaceName
 
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: process.env.FRONTEND_URL || (codespaceName ? `https://${codespaceName}-5173.app.github.dev` : 'http://localhost:5173'),
   }),
 );
 app.use(express.json());
