@@ -1,5 +1,5 @@
+import 'dotenv/config';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import express from 'express';
 import './config/database';
 import activitiesRouter from './routes/activities';
@@ -7,8 +7,6 @@ import leaderboardRouter from './routes/leaderboard';
 import teamsRouter from './routes/teams';
 import usersRouter from './routes/users';
 import workoutsRouter from './routes/workouts';
-
-dotenv.config();
 
 const app = express();
 const port = Number(process.env.PORT) || 8000;
